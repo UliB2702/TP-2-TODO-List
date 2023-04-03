@@ -5,7 +5,10 @@ function Listar(event){
 
     if(validarInput(valorImput))
     {
+
+        arrayTareas += CrearElemendo(valorImput)
         
+
     }
 }
 let validarInput = valorImput => {
@@ -15,4 +18,21 @@ let validarInput = valorImput => {
     else{
         return true;
     }
+}
+
+let CrearElemendo = valorImput =>{
+    let a = document.createElement("li")
+    let b = document.createElement("input")
+    b.type = "checkbox"
+    b.setAttribute("onclick", 'Tachar(event)')
+    a.appendChild(b)
+    a.appendChild(valorImput)
+
+    return a; 
+}
+
+let Tachar = event =>{
+    let current = event.currentTarget
+    let Padre = current.parentNode;
+    Padre[1].setAttribute(tachado);
 }

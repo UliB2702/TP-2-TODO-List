@@ -2,3 +2,7 @@
     padding: left;
     margin: 10px;
 }
+
+.tachado{
+    text-decoration:line-through
+}
