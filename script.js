@@ -1,12 +1,12 @@
+var arrayTareas = []
 function Listar(event){
     event.preventDefault();
-    let arrayTareas = []
     let valorImput = document.getElementById("inputt").value
 
     if(validarInput(valorImput))
     {
-
-        arrayTareas += CrearElemendo(valorImput)
+        let lista = document.getElementById("TODOlista")
+        lista.appendChild(CrearElemendo(valorImput))
         
 
     }
@@ -26,7 +26,7 @@ let CrearElemendo = valorImput =>{
     b.type = "checkbox"
     b.setAttribute("onclick", 'Tachar(event)')
     a.appendChild(b)
-    a.appendChild(valorImput)
+    a.innerHTML += valorImput
 
     return a; 
 }
