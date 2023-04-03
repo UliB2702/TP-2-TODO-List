@@ -1,10 +1,11 @@
 function Listar(event){
+    event.preventDefault();
     let arrayTareas = []
     let valorImput = document.getElementById("inputt").value
 
     if(validarInput(valorImput))
     {
-
+        
     }
 }
 let validarInput = valorImput => {
