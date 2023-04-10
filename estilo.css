@@ -6,3 +6,7 @@ li{
 .tachado{
     text-decoration:line-through
 }
+
+.destachado{
+    text-decoration: "text-decoration-none";
+}
